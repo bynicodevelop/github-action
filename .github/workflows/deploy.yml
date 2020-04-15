@@ -16,8 +16,8 @@ jobs:
       - run: npm run generate
       - name: Download Artifact
         uses: actions/download-artifact@master
-          with:
-            name: dist
+        with:
+          name: dist
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
