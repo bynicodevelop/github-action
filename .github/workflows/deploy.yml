@@ -14,7 +14,7 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm run generate
-      uses: falnyr/replace-env-vars-action@master
+      - uses: falnyr/replace-env-vars-action@master
       env:
         FOO: foo
         BAR: bar
