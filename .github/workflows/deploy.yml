@@ -15,11 +15,11 @@ jobs:
       - run: npm install
       - run: npm run generate
       - uses: falnyr/replace-env-vars-action@master
-      env:
-        FOO: foo
-        BAR: bar
-      with:
-        filename: .env
+        env:
+          FOO: foo
+          BAR: bar
+        with:
+          filename: .env
       - run: ls -a 
       - uses: w9jds/firebase-action@master
         with:
