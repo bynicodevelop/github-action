@@ -16,6 +16,6 @@ jobs:
       - run: npm run generate
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:atrapio-dev
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_HOSTING }}
