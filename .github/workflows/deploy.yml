@@ -14,13 +14,15 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm run generate
+      - run: touch .env
       - uses: falnyr/replace-env-vars-action@master
         env:
           FOO: foo
           BAR: bar
         with:
           filename: .env
-      - run: ls -a 
+      - run: ls -a
+      - run: cat .env 
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
